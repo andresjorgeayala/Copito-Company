@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 0px 5%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    transition: all 600ms;
+}
+.head__titulo h4{
+    font-size: 24px;
+    color: white;
+}
+.head__nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.head__nav a{
+    margin-right: 22px;
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s;
+    display: block;
+    padding: 10px 0px;
+    border-radius: 24px;
+    width: 100px;
+    text-align: center;
+    color: white;
+}
+.head__nav a:hover{
+    background: chocolate;
+    color: white;
+}
+/*Modo Nocturno*/
+.nocturno{
+    width: 40px;
+    height: 20px;
+    background: chocolate;
+    border-radius: 24px;
+    
+    position: relative;
+    cursor: pointer;
+}
+.nocturno__circulo{
+    width: 20px;
+    height: 20px;
+    background: white;
+    position: absolute;
+    border-radius: 24px;
+    border: 1px solid black;
+    top: 0;
+
+    left: 0;
+}
+.traslacion{
+    right: 0;
+    left: initial;
+}
+/*Boton*/
+.head i{
+    color: black;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 5px;
+    display: none;
+}
+@media only screen and (max-width:900px){
+    .head{
+        background: white;
+    }
+    .head h4{
+        color: black;
+    }
+    .head__nav{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        z-index: 5;
+        background: white;
+        right: 0;
+        top: 60px;
+
+        width: 200px;
+        height: 100vh;
+
+        justify-content: flex-start;
+
+        right: -100%;
+        transition: all 400ms;
+    }
+    .head i{
+        display: block;
+    }
+    .head__nav a{
+        border-radius: initial;
+        width: 100%;
+        margin-right: 0;
+        color: black;
+    }
+    .nocturno{
+        margin: 10px 0px;
+    }
+
+    .mostrarMenu{
+        right: 0%;
+    }
+    .banner{
+        margin-top: 60px;
+    }
+}
+.fixedmenu{
+    background: white;
+}.fixedmenu h4{
+    color: black;
+}.fixedmenu a{
+    color: black;
+}
+
+
+/*Banner img*/
+.banner{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.s1{
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/img001.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.s2{
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/img002.jpg);
+    background-size: cover;
+    display: none;
+    background-position: center;
+}
+.s3{
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/img003.png);
+    background-size: cover;
+    display: none;
+    background-position: center;
+}
+.s4{
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/img004.jpg);
+    background-size: cover;
+    display: none;
+    background-position: center;
+}
+.banner i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    background: white;
+    color: chocolate;
+    padding: 12px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 400ms;
+}
+.banner i:hover{
+    background: rgba(255, 255, 255, 0.5);
+}
+.fa-chevron-left{
+    left: 10px;
+}
+.fa-chevron-right{
+    right: 10px;
+}
+.degradado{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.slides{
+    position: relative;
+}
+.slides h1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    color: white;
+    z-index: 11;
+    font-size: 60px;
+    text-align: center;
+}
+
+/*Somos*/
+
+.somos{
+    width: 90%;
+    margin: 80px auto;
+    max-width: 1400px;
+    text-align: center;
+    padding: 80px 0px;
+}
+
+.somos__titulo h4{
+    font-size: 40px;
+    margin: 35px 0px;
+}
+
+.barrita{
+    height: 2px;
+    width: 30%;
+    background: chocolate;
+    margin: auto;
+    display: block;
+}
+.barrita2{
+    height: 2px;
+    width: 40%;
+    background: chocolate;
+    margin: auto;
+    display: block;
+}
+.barrita3{
+    height: 2px;
+    width: 20%;
+    background: chocolate;
+    margin: auto;
+    display: block;
+}
+
+.somos__titulo h4 span{
+    color: chocolate;
+}
+.somos__concepto{
+    line-height: 2;
+    width: 500px;
+    margin: auto;
+}
+.somos__concepto{
+    font-size: 25px;
+}
+/* Servicios */
+.servicios__titulo h4{
+    font-size: 40px;
+    margin: 35px 0px;
+    text-align: center;
+}
+form span{
+    color: chocolate;
+}
+.servicios__titulo span{
+    color: chocolate;
+}
+.servicios__contenido{
+    padding: 80px 0px;
+}
+.servicios{
+    width: 90%;
+    margin: 80px auto;
+    max-width: 1400px;
+}
+.servicios__ofrecemos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.servicios__contenedor{
+    width: 310px;
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
+.servicios__contenedor{
+    font-size: 24px;
+}
+.servicios__contenedor i{
+    font-size: 50px;
+    text-align: center;
+    display: block;
+    margin: 25px 0px;
+}
+.servicios__contenedor p{
+    padding: 20px;
+    z-index: 20;
+}
+.servicios__contenedor{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.circulos{
+    position: absolute;
+    background: linear-gradient(to bottom, rgb(255, 153, 0), rgb(77, 42, 10));
+    
+    top: 1000px;
+    left: -200%;
+    transition: all 300ms;
+    border-radius: 100%;
+    width: 10px;
+    height: 100px;
+}
+.servicios__contenedor:hover .circulos2{
+    top: -140px;
+    left: -110px;
+    z-index: -30;
+    width: 600px;
+    height: 700px;
+}
+.servicios__contenedor:hover .circulos{
+    top: -140px;
+    left: -110px;
+    z-index: -30;
+    width: 600px;
+    height: 700px;
+}
+
+.servicios__contenedor:hover .servicios__contenedor__texto{
+    color: white;
+}
+.servicios__contenedor:hover .far{
+    color: white;
+}
+.servicios__contenedor:hover .fas{
+    color: white;
+}
+/*Formulario*/
+.contactanos{
+    width: 90%;
+    margin: 20px auto;
+    max-width: 1400px;
+    padding: 80px 0px;
+}
+form h4{
+    font-size: 40px;
+    margin: 20px 0px;
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form .grupo{
+    position: relative;
+    margin: 25px 0px;
+}
+input{
+    background: white;
+    font-size: 14px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 220px;
+    border-radius: 4px;
+}
+input:focus{
+    outline: none;
+    color: #5e5d5d;
+}
+label{
+    color: #5e5d5d;
+    font-size: 16px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    transition: all 300ms;
+    pointer-events: none;
+}
+textarea{
+    display: block;
+    margin-top: 40px;
+    
+    outline: none;
+
+    max-width: 206px;
+    min-width: 206px;
+
+    max-height: 160px;
+    min-height: 160px;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 14px;
+}
+input:focus~label,
+input:valid~label
+{
+    top: -20px;
+    font-size: 13px;
+    color: chocolate;
+}
+textarea:valid~label{
+    font-size: 13px;
+    color: chocolate;
+}
+form button{
+    border: none;
+    outline: none;
+    background: white;
+    padding: 15px 40px;
+    
+    color: chocolate;
+    border: 2px solid chocolate;
+    cursor: pointer;
+    font-weight: 900;
+    transition: all 600ms;
+}
+form button:hover{
+    background: chocolate;
+    color: white;
+}
+form button:active{
+    transform: scale(1.5,3);
+}
+/*footer*/
+footer{
+    width: 100%;
+    height: 50px;
+    background: chocolate;
+    bottom: 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10%;
+}
+footer p{
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+}
+/*Estilos oscuridad*/
+.dark{
+    background: #20202c;
+    color: white;
+}
+.dark2{
+    background: #20202c;
+    color: white;
+}
+
+@media only screen and (max-width:800px){
+    .barrita3{
+        width: 60%;
+    }
+    .barrita{
+        height: 2px;
+        width: 70%;
+        background: chocolate;
+        margin: auto;
+        display: block;
+    }
+    .barrita2{
+        height: 2px;
+        width: 70%;
+        background: chocolate;
+        margin: auto;
+        display: block;
+    }
+}
+@media only screen and (max-width:570px){
+    .banner i{
+        background: none;
+    }
+    .somos__concepto{
+        width: 80%;
+    }
+    
+}
+@media only screen and (max-width:443px){
+    .slides h1{
+        font-size: 30px;
+    }
+    footer{
+        height: 80px;
+    }
+}
+@media only screen and (max-width:300px){
+    form h4{
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+    .slides h1{
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+    
+}
